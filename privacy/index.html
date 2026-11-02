@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy | PraiseLoop</title>
+  <meta name="description" content="What PraiseLoop collects, why, who we share it with, how long we keep it, and how to delete your account.">
+  <link rel="canonical" href="https://praiseloop.ca/privacy/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-name" href="/">PraiseLoop</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#how-it-works">How it works</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="mailto:hello@praiseloop.ca">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <article class="prose">
+      <h1>Privacy policy</h1>
+      <p><em>Last updated: 2026-11-01 (draft)</em></p>
+      <!-- TODO(owner): replace the draft date with the real effective date before publishing. -->
+
+      <h2>The short version</h2>
+      <p><strong>PraiseLoop turns a business's customer reviews into draft social posts.</strong> You approve every post before it goes anywhere, and you decide whether and where to publish it. This policy explains what we collect, why we need it, who we share it with, and how to have it deleted. We do not sell personal information, and we do not use it for advertising. PraiseLoop is a pilot, and some of the integrations described below are not live yet.</p>
+
+      <h2>Who we are and how to contact us</h2>
+      <p>PraiseLoop is operated by [legal name and mailing address to be added], in Ontario, Canada. In this policy, "we", "us" and "our" mean that operator. We are the organization responsible for the personal information described here.</p>
+      <!-- TODO(owner): insert the legal name, the entity type and the mailing address. -->
+      <p>Email <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a> for privacy questions, access or correction requests, or to ask us to delete your data. Email <a href="mailto:hello@praiseloop.ca">hello@praiseloop.ca</a> for everything else. We aim to answer privacy requests within 30 days.</p>
+      <p>This policy covers the PraiseLoop web app, the PraiseLoop phone app and this website.</p>
+
+      <h2>What we collect</h2>
+      <p>We collect what the service needs to work and what you choose to give us. We do not ask for more.</p>
+
+      <h3>Your account and sign-in</h3>
+      <ul>
+        <li>Your name. It may come from your sign-in provider, or you may set it yourself. You can change it in your profile. When you set it yourself, it is limited to 80 characters.</li>
+        <li>Your email address. With Google, this is the verified address Google provides. With an email sign-in code, it is the address you type. With Apple, it may be Apple's private relay address.</li>
+        <li>Your sign-in methods. We record which providers you have linked (Google, Apple, Microsoft or an email code), the provider's stable account ID, the email address shown for that method, and when it was added and last used. For Microsoft the ID is your tenant and object ID. For Google and Apple it is their subject ID. For email it is the normalized address.</li>
+        <li>We do not keep Google, Apple or Microsoft access tokens or identity tokens after sign-in. They are checked and then discarded. We store no passwords.</li>
+        <li>For email sign-in, we store the address, a keyed hash of the six-digit code (never the code itself), how many attempts were made, and when the code was created, expired, was used or was replaced. Codes last 10 minutes and work once. Used and expired records are kept as an audit trail and may be pruned.</li>
+        <li>Session records: a hash of the session token (not the token), whether the session is for the browser or the phone, when it started, when it was last used and when it expires. Browser sessions last 8 hours. Phone sessions last 30 days after last use, up to 90 days in total.</li>
+        <li>On your phone, the app keeps its session token in the device keychain, along with your notification choice. The token is not kept in plain app storage.</li>
+      </ul>
+
+      <h3>Your business profile</h3>
+      <ul>
+        <li>The business name, timezone, brand colours, template and quote-size settings, tone (friendly, premium or playful), posting days and times, weekly post target, and your logo image if you add one.</li>
+        <li>If you ask us to learn your brand voice, we store the short voice profile we generate, the web address of the public page you gave us, and when it was updated. We read that one page, use at most about 6,000 characters of its readable text for the request, and do not keep the page text afterwards.</li>
+      </ul>
+
+      <h3>Reviews you import</h3>
+      <ul>
+        <li>For each review: the rating from 1 to 5, the review text, the reviewer's name if your file has one, the date of the review, the source (manual import or Google), an optional source review ID, an optional source URL, and when we imported it.</li>
+        <li>We compute a fingerprint from the rating, reviewer name, text and date so that a repeated import does not create duplicates. We record when one row is a duplicate of another.</li>
+        <li>Review text can mention customers by name or include other personal details. We store it as you provide it. You are responsible for having the right to use it.</li>
+        <li>Google review sync is not live. Reviews come from what you import today.</li>
+      </ul>
+
+      <h3>Drafts, captions, images and approval history</h3>
+      <ul>
+        <li>For each draft: the chosen quote, the caption, its status, a scheduled time if one is set, the path to its image, a version number, when it was created and updated, and when you marked it as shared.</li>
+        <li>An internal note field can hold a short sanitized status or error code, for example when a generation job failed.</li>
+        <li>Every status change is recorded with the actor, the time, the action, the reason, and the old and new status.</li>
+        <li>Your logo and the generated quote-card images are stored in private storage on our server. We serve them only to the signed-in owner. They are not public and are not listed anywhere.</li>
+        <li>On the free plan, images carry a small PraiseLoop watermark.</li>
+      </ul>
+
+      <h3>Push notifications</h3>
+      <ul>
+        <li>If you turn on notifications, we store the Expo push token for each device, the platform (iOS or Android), and when it was registered and last seen.</li>
+        <li>We keep a delivery record for each weekly notification: the business, the week, the token, the number of posts, the delivery status and attempts, the provider ticket ID, a sanitized error code, and timestamps.</li>
+        <li>Notifications contain a count, the business name and a link into the app. They do not contain review text or captions.</li>
+      </ul>
+
+      <h3>Plan and usage</h3>
+      <ul>
+        <li>Your plan (free or pro), where it came from (the default, an operator change or a store purchase), its expiry, and when it last changed.</li>
+        <li>A history of plan changes with the actor and the reason.</li>
+        <li>Daily counters for AI generation and previews: the date, the kind of call and the number of calls. These enforce limits. They do not contain review text.</li>
+      </ul>
+
+      <h3>Connections you choose to add</h3>
+      <ul>
+        <li><strong>Google Business Profile review sync is not live.</strong> Google has not approved API access. If it becomes available and you connect your location, we would store the location name, an encrypted Google refresh token, the connection status, a page checkpoint for an interrupted import, the time and count of the last sync, and a sanitized error code.</li>
+        <li><strong>Buffer automatic posting is not live.</strong> If it becomes available and you connect Buffer, we would store encrypted OAuth credentials and the channel you choose. When you approve a post for scheduling, we would send Buffer the approved caption and image and your chosen channel. We would not send Buffer your other drafts or your reviews.</li>
+      </ul>
+
+      <h3>Technical data</h3>
+      <ul>
+        <li>We do not store your IP address in our database. To limit abuse, the server keeps short-lived counters in memory for failed sign-in attempts and email code requests, counted per IP address. These counters are lost when the server restarts.</li>
+        <li>In production, our server logs are designed to exclude review text, captions, email addresses, access tokens and provider responses. They record event names, counts and sanitized error codes. Account deletion logs a file count, not file names.</li>
+        <li>This website is hosted by GitHub Pages. The app is reached through a Cloudflare Tunnel. Those providers carry the request and may keep standard technical logs under their own policies.</li>
+      </ul>
+      <!-- TODO(owner): confirm that GitHub Pages is the final host for this site and that no Pages or CDN setting changes this statement. -->
+      <!-- TODO(owner): state how long server and provider logs are kept, once that is decided. The app repo does not set a period. -->
+
+      <h2>Why we use it</h2>
+      <ul>
+        <li>To provide the service you asked for: store your business, import reviews, choose quotes, write captions, render images, run the weekly queue, show your plan, and send the notifications you turn on.</li>
+        <li>To sign you in and keep your account secure, including checking your session on every protected request and recording your sign-in methods.</li>
+        <li>To prevent abuse and keep the service fair: rate limits on sign-in and email codes, daily AI limits and plan limits.</li>
+        <li>To support you: answer your emails and investigate problems. We look at your data only with your permission, unless we must for security or legal reasons.</li>
+        <li>To meet the law and enforce our terms.</li>
+      </ul>
+      <p>We do not use your personal information for advertising. We do not sell it. We do not create profiles of you for other organizations.</p>
+      <p>We rely on your consent, which you give by using the service, and on the need to provide the service you asked for. You can withdraw consent, but some features will then stop working.</p>
+
+      <h2>AI processing</h2>
+      <ul>
+        <li>Captions are written by an AI model. To write them, we send the review quote, your business name and your chosen tone. If you have a brand voice, we send that too. We do not send the reviewer's name, your email address, your sign-in details or your logo.</li>
+        <li>The app uses OpenAI, currently the gpt-4o-mini model, or OpenRouter with a model the operator selects. OpenAI is used when its key is configured; otherwise OpenRouter is used. The provider can change as the service develops.</li>
+        <li>For brand voice, we send the readable text of one public page you give us, up to about 6,000 characters, and ask for a short profile. We do not fetch private pages.</li>
+        <li>We send only what the feature needs. Once a request reaches a provider, we do not control how that provider stores or uses it. OpenAI's and OpenRouter's own privacy policies and terms apply. Please read them if this matters to you.</li>
+        <li>AI output can be wrong, incomplete or bland. Every caption and image is a draft. You review and approve it before it is posted. AI review replies are a planned Pro feature and are not available.</li>
+      </ul>
+
+      <h2>Who we share it with</h2>
+      <p>We share personal information only with the providers that help us run PraiseLoop, and only what each one needs. Where they process data for us, they act on our instructions. Sign-in providers also handle your account under their own terms. We do not sell personal information. We do not share it for advertising.</p>
+      <ul>
+        <li><strong>Google, Apple and Microsoft.</strong> Sign-in. We receive your name, your email address and a stable account ID. We do not receive your password.</li>
+        <li><strong>Resend.</strong> Sends sign-in code emails. It receives the email address and the message.</li>
+        <li><strong>OpenAI or OpenRouter.</strong> Writes captions and brand-voice profiles. It receives the fields listed under AI processing.</li>
+        <li><strong>Expo.</strong> Delivers push notifications to your phone. It receives the push token and the notification content, which is a count, the business name and a link.</li>
+        <li><strong>Buffer.</strong> Only if you connect it, and only when automatic posting becomes available. It would receive the approved caption, the approved image and your chosen channel.</li>
+        <li><strong>Cloudflare.</strong> DNS and the network tunnel that reach the app. It carries requests to us.</li>
+        <li><strong>GitHub Pages.</strong> Hosts this website.</li>
+        <li><strong>Our own server.</strong> Hosts the app and stores the data. During the pilot this is a server the operator controls.</li>
+        <li><strong>Zoho Mail.</strong> Hosts our mailboxes so we can receive and answer email.</li>
+        <li><strong>Our off-site backup destination.</strong> Stores compressed backups of the database and the image storage. The operator chooses the provider.</li>
+      </ul>
+      <!-- TODO(owner): confirm that hello@praiseloop.ca and privacy@praiseloop.ca are hosted by Zoho Mail, and name the off-site backup provider. -->
+      <p>We may also disclose information if the law requires it, if we need to enforce our terms, or to protect someone's safety. We will tell you unless the law forbids it.</p>
+      <p>This policy does not cover social networks, app stores or other services you use alongside PraiseLoop. Their own policies apply.</p>
+
+      <h2>Google API Services User Data Policy</h2>
+      <p>PraiseLoop's use and transfer to any other app of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+      <p>You can read that policy at <a href="https://developers.google.com/terms/api-services-user-data-policy">developers.google.com/terms/api-services-user-data-policy</a>.</p>
+      <p><strong>What we read from Google.</strong> Today we use Google only for sign-in, with the basic scopes openid, email and profile. We receive your name, your email address and your Google account ID. We do not read your Gmail, calendar, files or contacts. If review sync becomes available and you choose to connect your business location, we would read that location's reviews: the review text, rating, reviewer name, review date and review ID. We would not read anything else. That connection does not exist today.</p>
+      <p><strong>What we do with it.</strong> We use Google user data only to provide the features you asked for: signing you in and, in future, importing your reviews so PraiseLoop can prepare posts for your business. We do not use it for advertising. We do not sell it. We do not use it to train or improve generalized AI models. We do not let people read it, except for support with your permission, or for security or legal reasons.</p>
+      <p>When a review is turned into a post, the review quote is sent to our AI provider to write a caption, as described under AI processing. That is part of providing the feature to you.</p>
+      <!-- TODO(owner): before Google review sync goes live, confirm with Google that using review text to generate social captions is permitted, and record the answer. -->
+
+      <h2>How long we keep data, and deletion</h2>
+      <p>We keep your account data while your account exists. You can delete your account at any time in the app or on the web. Both have a Delete account button in your profile.</p>
+      <p>Deletion is immediate and complete in the live database. One transaction removes your owner record, businesses, reviews, drafts, approval history, generated images, logos, sign-in methods, plan and usage records, push tokens, sessions, and any Google connection. Media files are removed from storage after the database change. There is no soft delete and no recovery period.</p>
+      <p><strong>Backups.</strong> We take a nightly backup of the database and the image storage and copy it off the machine. The backup script compresses the files but does not encrypt them itself. Backups are kept for 14 days by default and then deleted automatically. Data from a deleted account can therefore remain in a backup for up to about 14 days. There is no restore of a single account today.</p>
+      <!-- TODO(owner): confirm the nightly backup cron from docs/development.md is actually running on the pilot server before publishing this paragraph. -->
+      <p>Email sign-in code records are kept after use or expiry as an audit trail, and may be pruned.</p>
+      <p><strong>Buffer and social networks.</strong> Posts you have already shared are outside our control. Deleting your account does not remove them from Instagram, Facebook or anywhere else you posted them. If you connected Buffer, Buffer does not offer a revoke call we can use, so revoke PraiseLoop in your Buffer settings and manage or delete any scheduled posts there.</p>
+      <!-- TODO(owner): confirm with Buffer that there is no revoke call, and update this sentence if one exists. -->
+      <p>Deleting your account does not cancel an App Store or Google Play subscription. Cancel it in the store.</p>
+      <p>You can also email <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a> and we will delete your account for you.</p>
+
+      <h2>Security</h2>
+      <ul>
+        <li>We use HTTPS for the app and this website, so data is encrypted in transit.</li>
+        <li>Provider tokens are encrypted at rest with AES-256-GCM. The encryption binds each token to its owner and business, so a token cannot be reused for another account.</li>
+        <li>Session tokens are stored only as hashes. Sign-in tokens from Google, Apple and Microsoft are not stored.</li>
+        <li>Every API route that handles account or business data is checked against the signed-in owner. Another owner's business, draft or image returns not found.</li>
+        <li>Uploads are size-limited, and private images are served only through an authenticated route.</li>
+      </ul>
+      <p>No system is perfectly secure. We cannot promise absolute security. If a breach affects your information, we will tell you and the Office of the Privacy Commissioner of Canada as the law requires.</p>
+
+      <h2>Cookies and tracking</h2>
+      <ul>
+        <li>The app sets only the cookies it needs to sign you in: the session cookie and the short-lived cookies the sign-in library uses during sign-in. There are no analytics, advertising or tracking cookies.</li>
+        <li>This website sets no cookies at all. It has no JavaScript, no analytics, no trackers, no embedded content, no remote fonts and no remote images. Everything it needs is served from praiseloop.ca.</li>
+        <li>We do not use cross-site tracking or advertising identifiers.</li>
+      </ul>
+
+      <h2>Where your data is processed</h2>
+      <p>The operator is in Ontario, Canada. The app runs on a server the operator controls, at present a home server reached through Cloudflare.</p>
+      <p>Some of our service providers process data outside Canada, including in the United States. When data is processed outside Canada, it is subject to the laws of that country.</p>
+      <!-- TODO(owner): confirm the countries where each provider processes data, then replace or keep the United States sentence. -->
+      <p>Our providers' own policies describe where they process data.</p>
+
+      <h2>Your choices and rights</h2>
+      <p>Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), you can ask to see the personal information we hold about you, ask us to correct it, withdraw consent, and ask us to delete it.</p>
+      <ul>
+        <li>You can delete your account in the app or by emailing <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a>.</li>
+        <li>You can withdraw consent at any time. If you withdraw consent for something the service needs, we may not be able to keep providing it.</li>
+        <li>We aim to answer within 30 days. If we need more time, we will tell you why.</li>
+        <li>If you are not satisfied, you can complain to the Office of the Privacy Commissioner of Canada at <a href="https://www.priv.gc.ca/">https://www.priv.gc.ca/</a>.</li>
+      </ul>
+      <!-- TODO(owner): have a Canadian privacy professional or lawyer review this PIPEDA section, the 30-day aim and the OPC wording. -->
+
+      <h2>Customers' reviews</h2>
+      <p>Reviews you import are about your business. They may include a customer's name or other details.</p>
+      <p>You are responsible for having the right to use each review, including any permission your customer or the source platform requires. If a review comes from a platform with attribution or reuse rules, you must follow them.</p>
+      <p>We store only the review fields listed above and use them only to prepare posts for your business. We do not publish them ourselves. You decide whether and where to post.</p>
+      <p>If someone asks you to remove their review from PraiseLoop, contact us and we will help.</p>
+
+      <h2>Children</h2>
+      <p>PraiseLoop is for business owners and managers. It is not intended for anyone under the age of majority.</p>
+      <p>We do not knowingly collect personal information from children. If you think a child has given us information, email <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a> and we will delete it.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy. We will change the date at the top. For material changes, we will tell owners by email or in the app before the change takes effect.</p>
+      <p>If you keep using PraiseLoop after a change, the new policy applies.</p>
+      <!-- TODO(owner): confirm how material changes will be announced. The app has transactional sign-in email but no broadcast tool today. -->
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 PraiseLoop</p>
+      <p><a href="/privacy/">Privacy policy</a> · <a href="/terms/">Terms of service</a> · <a href="mailto:hello@praiseloop.ca">hello@praiseloop.ca</a></p>
+    </div>
+  </footer>
+</body>
+</html>

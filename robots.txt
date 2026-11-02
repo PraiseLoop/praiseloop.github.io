@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://praiseloop.ca/sitemap.xml
