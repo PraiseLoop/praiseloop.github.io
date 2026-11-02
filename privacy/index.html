@@ -97,9 +97,9 @@
       <ul>
         <li>We do not store your IP address in our database. To limit abuse, the server keeps short-lived counters in memory for failed sign-in attempts and email code requests, counted per IP address. These counters are lost when the server restarts.</li>
         <li>In production, our server logs are designed to exclude review text, captions, email addresses, access tokens and provider responses. They record event names, counts and sanitized error codes. Account deletion logs a file count, not file names.</li>
+        <li>Server logs rotate automatically. Each service keeps at most about 30 MB of recent log lines, and older lines are deleted, so the logs hold only recent activity.</li>
         <li>This website is hosted by GitHub Pages. The app is reached through a Cloudflare Tunnel. Those providers carry the request and may keep standard technical logs under their own policies.</li>
       </ul>
-      <!-- TODO(owner): state how long server and provider logs are kept, once that is decided. The app repo does not set a period. -->
 
       <h2>Why we use it</h2>
       <ul>
