@@ -32,8 +32,7 @@
       <p><strong>PraiseLoop turns a business's customer reviews into draft social posts.</strong> You approve every post before it goes anywhere, and you decide whether and where to publish it. This policy explains what we collect, why we need it, who we share it with, and how to have it deleted. We do not sell personal information, and we do not use it for advertising. PraiseLoop is a pilot, and some of the integrations described below are not live yet.</p>
 
       <h2>Who we are and how to contact us</h2>
-      <p>PraiseLoop is operated by [legal name and mailing address to be added], in Ontario, Canada. In this policy, "we", "us" and "our" mean that operator. We are the organization responsible for the personal information described here.</p>
-      <!-- TODO(owner): insert the legal name, the entity type and the mailing address. -->
+      <p>PraiseLoop is operated by Stephen Davis, operating as PraiseLoop, in Ontario, Canada. In this policy, "we", "us" and "our" mean Stephen Davis, operating as PraiseLoop. We are responsible for the personal information described here.</p>
       <p>Email <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a> for privacy questions, access or correction requests, or to ask us to delete your data. Email <a href="mailto:hello@praiseloop.ca">hello@praiseloop.ca</a> for everything else. We aim to answer privacy requests within 30 days.</p>
       <p>This policy covers the PraiseLoop web app, the PraiseLoop phone app and this website.</p>
 
@@ -100,7 +99,6 @@
         <li>In production, our server logs are designed to exclude review text, captions, email addresses, access tokens and provider responses. They record event names, counts and sanitized error codes. Account deletion logs a file count, not file names.</li>
         <li>This website is hosted by GitHub Pages. The app is reached through a Cloudflare Tunnel. Those providers carry the request and may keep standard technical logs under their own policies.</li>
       </ul>
-      <!-- TODO(owner): confirm that GitHub Pages is the final host for this site and that no Pages or CDN setting changes this statement. -->
       <!-- TODO(owner): state how long server and provider logs are kept, once that is decided. The app repo does not set a period. -->
 
       <h2>Why we use it</h2>
@@ -135,9 +133,7 @@
         <li><strong>GitHub Pages.</strong> Hosts this website.</li>
         <li><strong>Our own server.</strong> Hosts the app and stores the data. During the pilot this is a server the operator controls.</li>
         <li><strong>Zoho Mail.</strong> Hosts our mailboxes so we can receive and answer email.</li>
-        <li><strong>Our off-site backup destination.</strong> Stores compressed backups of the database and the image storage. The operator chooses the provider.</li>
       </ul>
-      <!-- TODO(owner): confirm that hello@praiseloop.ca and privacy@praiseloop.ca are hosted by Zoho Mail, and name the off-site backup provider. -->
       <p>We may also disclose information if the law requires it, if we need to enforce our terms, or to protect someone's safety. We will tell you unless the law forbids it.</p>
       <p>This policy does not cover social networks, app stores or other services you use alongside PraiseLoop. Their own policies apply.</p>
 
@@ -152,8 +148,7 @@
       <h2>How long we keep data, and deletion</h2>
       <p>We keep your account data while your account exists. You can delete your account at any time in the app or on the web. Both have a Delete account button in your profile.</p>
       <p>Deletion is immediate and complete in the live database. One transaction removes your owner record, businesses, reviews, drafts, approval history, generated images, logos, sign-in methods, plan and usage records, push tokens, sessions, and any Google connection. Media files are removed from storage after the database change. There is no soft delete and no recovery period.</p>
-      <p><strong>Backups.</strong> We take a nightly backup of the database and the image storage and copy it off the machine. The backup script compresses the files but does not encrypt them itself. Backups are kept for 14 days by default and then deleted automatically. Data from a deleted account can therefore remain in a backup for up to about 14 days. There is no restore of a single account today.</p>
-      <!-- TODO(owner): confirm the nightly backup cron from docs/development.md is actually running on the pilot server before publishing this paragraph. -->
+      <p><strong>Backups.</strong> We do not currently keep backups of the database or the image storage, so deleting your account leaves no copy of your data with us. If we start keeping backups, we will update this policy first. We expect to keep them for no more than 14 days, and data from a deleted account could remain in a backup for that long.</p>
       <p>Email sign-in code records are kept after use or expiry as an audit trail, and may be pruned.</p>
       <p><strong>Buffer and social networks.</strong> Posts you have already shared are outside our control. Deleting your account does not remove them from Instagram, Facebook or anywhere else you posted them. If you connected Buffer, Buffer does not offer a revoke call we can use, so revoke PraiseLoop in your Buffer settings and manage or delete any scheduled posts there.</p>
       <!-- TODO(owner): confirm with Buffer that there is no revoke call, and update this sentence if one exists. -->
@@ -204,9 +199,8 @@
       <p>We do not knowingly collect personal information from children. If you think a child has given us information, email <a href="mailto:privacy@praiseloop.ca">privacy@praiseloop.ca</a> and we will delete it.</p>
 
       <h2>Changes to this policy</h2>
-      <p>We may update this policy. We will change the date at the top. For material changes, we will tell owners by email or in the app before the change takes effect.</p>
+      <p>We may update this policy. We will change the date at the top. For material changes, we will email the address on your account before the change takes effect.</p>
       <p>If you keep using PraiseLoop after a change, the new policy applies.</p>
-      <!-- TODO(owner): confirm how material changes will be announced. The app has transactional sign-in email but no broadcast tool today. -->
     </article>
   </main>
   <footer class="site-footer">
