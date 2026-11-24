@@ -26,7 +26,7 @@
   <main id="main" class="container">
     <article class="prose">
       <h1>Privacy policy</h1>
-      <p><em>Last updated: 2026-11-14</em></p>
+      <p><em>Last updated: 2026-11-24</em></p>
 
       <h2>The short version</h2>
       <p><strong>PraiseLoop turns a business's customer reviews into draft social posts.</strong> You approve every post before it goes anywhere, and you decide whether and where to publish it. This policy explains what we collect, why we need it, who we share it with, and how to have it deleted. We do not sell personal information, and we do not use it for advertising. PraiseLoop is a pilot, and some of the integrations described below are not live yet.</p>
@@ -58,10 +58,11 @@
 
       <h3>Reviews you import</h3>
       <ul>
-        <li>For each review: the rating from 1 to 5, the review text, the reviewer's name if your file has one, the date of the review, the source (manual import or Google), an optional source review ID, an optional source URL, and when we imported it.</li>
+        <li>For each review: the rating from 1 to 5, the review text, the reviewer's name if your file has one, the date of the review, the source (a file you import, a Google Takeout export, or a fetch through Apify), an optional source review ID, an optional source URL, and when we imported it.</li>
         <li>We compute a fingerprint from the rating, reviewer name, text and date so that a repeated import does not create duplicates. We record when one row is a duplicate of another.</li>
         <li>Review text can mention customers by name or include other personal details. We store it as you provide it. You are responsible for having the right to use it.</li>
         <li>Google review sync is not live. Reviews come from what you import today.</li>
+        <li>If you ask us to fetch your Google reviews through Apify, you give us the Google Maps link to your own business and confirm that you run it. We record that confirmation, who made it and when, and the Apify run's ID and status. From the results we keep the rating, text, date and review ID, and shorten the reviewer's name to a first name and last initial. We discard reviewer profile links, photos and review links.</li>
       </ul>
 
       <h3>Drafts, captions, images and approval history</h3>
@@ -129,6 +130,7 @@
         <li><strong>OpenAI or OpenRouter.</strong> Writes captions and brand-voice profiles. It receives the fields listed under AI processing.</li>
         <li><strong>Expo.</strong> Delivers push notifications to your phone. It receives the push token and the notification content, which is a count, the business name and a link.</li>
         <li><strong>Buffer.</strong> Only if you connect it, and only when automatic posting becomes available. It would receive the approved caption, the approved image and your chosen channel.</li>
+        <li><strong>Apify.</strong> Only if you use the Google reviews fetch. It receives the Google Maps link to your business, collects that place's public reviews and returns them to us. The full results, including reviewers' public profile details, stay in Apify's storage until Apify's retention period removes them. This is a temporary option until official Google review sync is available.</li>
         <li><strong>Cloudflare.</strong> DNS and the network tunnel that reach the app. It carries requests to us.</li>
         <li><strong>GitHub Pages.</strong> Hosts this website.</li>
         <li><strong>Our own server.</strong> Hosts the app and stores the data. During the pilot this is a server the operator controls at home. A rented server (VPS) is planned; this policy will name that provider before data moves.</li>
@@ -148,7 +150,7 @@
       <h2>How long we keep data, and deletion</h2>
       <p>We keep your account data while your account exists. You can delete your account at any time in the app or on the web. Both have a Delete account button in your profile.</p>
       <p>Deletion is immediate and complete in the live database. One transaction removes your owner record, businesses, reviews, drafts, approval history, generated images, logos, sign-in methods, plan and usage records, push tokens, sessions, and any Google connection. Media files are removed from storage after the database change. There is no soft delete and no recovery period.</p>
-      <p><strong>Backups.</strong> We do not currently keep backups of the database or the image storage, so deleting your account leaves no copy of your data with us. If we start keeping backups, we will update this policy first. We expect to keep them for no more than 14 days, and data from a deleted account could remain in a backup for that long.</p>
+      <p><strong>Backups.</strong> The whole server that runs the app, including the database and the image storage, is backed up once a week. We keep the two most recent backups, and each new backup replaces the oldest. Data from a deleted account can therefore remain in a backup for up to about 14 days, after which it is overwritten. We do not restore a deleted account from a backup. We do not keep a separate backup of the database.</p>
       <p>Email sign-in code records are kept after use or expiry as an audit trail, and may be pruned.</p>
       <p><strong>Buffer and social networks.</strong> Posts you have already shared are outside our control. Deleting your account does not remove them from Instagram, Facebook or anywhere else you posted them. If you connected Buffer, deleting your account removes the access tokens we stored. To remove PraiseLoop from your Buffer account itself, revoke it in your Buffer settings, and manage or delete any scheduled posts there.</p>
       <p>Deleting your account does not cancel an App Store or Google Play subscription. Cancel it in the store.</p>
