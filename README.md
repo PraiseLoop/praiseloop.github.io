@@ -103,7 +103,6 @@ Exit code 0 means every check passed. No browser or network access is used.
 ## Before publishing
 
 - [ ] Every `TODO(owner)` marker is resolved. `python3 check_site.py` lists them.
-- [ ] A lawyer has reviewed `/privacy/` and `/terms/`.
 - [ ] `python3 check_site.py --strict` exits 0.
 - [ ] The Pages deployment is green, the custom domain is verified and **Enforce HTTPS**
       is ticked.
